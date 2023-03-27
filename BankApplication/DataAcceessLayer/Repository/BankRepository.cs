@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+//using System.Data.Entity;
+using System.Data.Entity.Utilities;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,8 +26,17 @@ namespace DBLayer.Repository
 
         public List<BankDataModel> GetAllBankDetails()
         {
-            var result = Context.Banks.Where(r=>r.IsActive).ToList();
-            return result.Adapt<List<BankDataModel>>();
+            try
+            {
+                var result = Context.Banks.Where(r => r.IsActive).ToList();
+                return result.Adapt<List<BankDataModel>>();
+            }
+            catch(Exception ex)
+            {
+              
+                throw ex;
+                
+            }
         }
 
         public UserCredential VerifyUser(string UserName,string Password)
@@ -55,14 +66,14 @@ namespace DBLayer.Repository
         public async Task<AccountInfoDataModel> GetAccountDetails(string UserName, string BankName)
         {
             var BankId = GetBankIdByBankName(BankName); ;
-            var result =await Context.AccountInfos.AsNoTracking().FirstOrDefaultAsync(r => r.AccountName == UserName && r.BankId == BankId);
+            var result = await Context.AccountInfos.AsNoTracking().FirstOrDefaultAsync(r => r.AccountName == UserName && r.BankId == BankId);
             var response = result.Adapt<AccountInfoDataModel>();
             return response;
         }
         public async Task<decimal> CheckBalance(string Email)
         {
             
-            var result =await Context.AccountInfos.FirstOrDefaultAsync(r => r.AccountEmail == Email);
+            var result =await Context.AccountInfos.AsNoTracking().FirstOrDefaultAsync(r => r.AccountEmail == Email);
             return result == null ? 0 : result.Balance;
         }
         public async Task<AccountInfoDataModel> GetAccountInfoByEmail(string Email)
@@ -71,6 +82,16 @@ namespace DBLayer.Repository
             var result =await Context.AccountInfos.AsNoTracking().FirstOrDefaultAsync(r => r.AccountEmail == Email);
             var response = result.Adapt<AccountInfoDataModel>();
             return response;
+        }
+        public async Task<bool> CheckIfCurrencyExists(string Currency)
+        {
+            var result = await Context.CurrencyCharts.AsNoTracking().AnyAsync(r => r.CurrencyType == Currency);
+            return result;
+        }
+        public async Task<decimal> GetCurrencyRate(string Currency)
+        {
+            var result = await Context.CurrencyCharts.AsNoTracking().FirstOrDefaultAsync(r => r.CurrencyType == Currency);
+            return result.Rate;
         }
     }
     }

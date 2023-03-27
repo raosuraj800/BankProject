@@ -42,4 +42,11 @@ namespace DBLayer.DataModel
         public string BankName { get; set; }
         public string AccountName { get; set; }
     }
+    public class TransactionAccount {
+        public decimal Amount { get; set; }
+        public bool toSameBank { get; set; }
+        public string? BankName { get; set; }
+        public bool IsRTGS { get; set; }
+        public string? AccountName { get; set; }
+    }
 }

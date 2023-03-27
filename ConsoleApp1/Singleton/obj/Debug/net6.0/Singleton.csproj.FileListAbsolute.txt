@@ -1,0 +1,15 @@
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\bin\Debug\net6.0\Singleton.exe
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\bin\Debug\net6.0\Singleton.deps.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\bin\Debug\net6.0\Singleton.runtimeconfig.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\bin\Debug\net6.0\Singleton.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\bin\Debug\net6.0\Singleton.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\obj\Debug\net6.0\Singleton.csproj.AssemblyReference.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\obj\Debug\net6.0\Singleton.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\obj\Debug\net6.0\Singleton.AssemblyInfoInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\obj\Debug\net6.0\Singleton.AssemblyInfo.cs
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\obj\Debug\net6.0\Singleton.csproj.CoreCompileInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\obj\Debug\net6.0\Singleton.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\obj\Debug\net6.0\refint\Singleton.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\obj\Debug\net6.0\Singleton.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\obj\Debug\net6.0\Singleton.genruntimeconfig.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\Singleton\obj\Debug\net6.0\ref\Singleton.dll

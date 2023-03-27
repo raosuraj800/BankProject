@@ -1,0 +1,15 @@
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\FactoryPattern.exe
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\FactoryPattern.deps.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\FactoryPattern.runtimeconfig.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\FactoryPattern.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\net6.0\FactoryPattern.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\FactoryPattern.csproj.AssemblyReference.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\FactoryPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\FactoryPattern.AssemblyInfoInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\FactoryPattern.AssemblyInfo.cs
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\FactoryPattern.csproj.CoreCompileInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\FactoryPattern.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\refint\FactoryPattern.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\FactoryPattern.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\FactoryPattern.genruntimeconfig.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\net6.0\ref\FactoryPattern.dll

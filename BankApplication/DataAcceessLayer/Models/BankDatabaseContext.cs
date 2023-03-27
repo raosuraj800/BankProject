@@ -26,7 +26,7 @@ namespace DBLayer.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=TL397;Database=BankDatabase;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=TL397;Database=BankDatabase;Encrypt=false;Trusted_Connection=True;");
             }
         }
 
@@ -104,7 +104,7 @@ namespace DBLayer.Models
 
             modelBuilder.Entity<CurrencyChart>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.CurrencyType);
 
                 entity.ToTable("CurrencyChart");
 
@@ -112,7 +112,19 @@ namespace DBLayer.Models
                     .HasMaxLength(4)
                     .IsUnicode(false);
 
+                entity.Property(e => e.CreatedBy)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+
                 entity.Property(e => e.Rate).HasColumnType("money");
+
+                entity.Property(e => e.UpdatedBy)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
             });
 
             modelBuilder.Entity<TransactionInfo>(entity =>

@@ -1,0 +1,15 @@
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\bin\Debug\net6.0\GenericsExample.exe
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\bin\Debug\net6.0\GenericsExample.deps.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\bin\Debug\net6.0\GenericsExample.runtimeconfig.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\bin\Debug\net6.0\GenericsExample.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\bin\Debug\net6.0\GenericsExample.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\obj\Debug\net6.0\GenericsExample.csproj.AssemblyReference.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\obj\Debug\net6.0\GenericsExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\obj\Debug\net6.0\GenericsExample.AssemblyInfoInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\obj\Debug\net6.0\GenericsExample.AssemblyInfo.cs
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\obj\Debug\net6.0\GenericsExample.csproj.CoreCompileInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\obj\Debug\net6.0\GenericsExample.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\obj\Debug\net6.0\refint\GenericsExample.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\obj\Debug\net6.0\GenericsExample.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\obj\Debug\net6.0\GenericsExample.genruntimeconfig.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\GenericsExample\obj\Debug\net6.0\ref\GenericsExample.dll

@@ -16,5 +16,6 @@ namespace Services.Services
         public string InsertBankDetails(BankDataModel bank);
         List<BankData> GetAllBank();
         Task<string?> FindBankId(string BankName);
+        string InsertCurrencyRate(string Currency, decimal Rate);
     }
 }

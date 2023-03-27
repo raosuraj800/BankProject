@@ -9,8 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
 using System.Linq;
-
-
+using Microsoft.Extensions.Logging;
 
 namespace DBLayer.Repository
 {
@@ -19,7 +18,7 @@ namespace DBLayer.Repository
         private DbSet<T> _entities;
         private string _errorMessage = string.Empty;
         private bool _isDisposed;
-    
+      
         public GenericRepository(IUnitOfWork<BankDatabaseContext> unitOfWork)
             : this(unitOfWork.Context)
         {
@@ -28,6 +27,7 @@ namespace DBLayer.Repository
         {
             _isDisposed = false;
             Context = context;
+            
         }
       
         public BankDatabaseContext Context { get; set; }

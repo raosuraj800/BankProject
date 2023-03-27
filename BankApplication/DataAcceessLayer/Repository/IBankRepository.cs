@@ -17,5 +17,7 @@ namespace DBLayer.Repository
         Task<decimal> CheckBalance(string Email);
         Task<AccountInfoDataModel> GetAccountInfoByEmail(string Email);
         Task<AccountInfoDataModel> GetAccountDetails(string UserName, string BankName);
+        Task<bool> CheckIfCurrencyExists(string Currency);
+        Task<decimal> GetCurrencyRate(string Currency);
     }
 }

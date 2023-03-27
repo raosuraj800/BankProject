@@ -1,0 +1,15 @@
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\bin\Debug\net6.0\FlyWeightPattern.exe
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\bin\Debug\net6.0\FlyWeightPattern.deps.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\bin\Debug\net6.0\FlyWeightPattern.runtimeconfig.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\bin\Debug\net6.0\FlyWeightPattern.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\bin\Debug\net6.0\FlyWeightPattern.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\obj\Debug\net6.0\FlyWeightPattern.csproj.AssemblyReference.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\obj\Debug\net6.0\FlyWeightPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\obj\Debug\net6.0\FlyWeightPattern.AssemblyInfoInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\obj\Debug\net6.0\FlyWeightPattern.AssemblyInfo.cs
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\obj\Debug\net6.0\FlyWeightPattern.csproj.CoreCompileInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\obj\Debug\net6.0\FlyWeightPattern.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\obj\Debug\net6.0\refint\FlyWeightPattern.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\obj\Debug\net6.0\FlyWeightPattern.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\obj\Debug\net6.0\FlyWeightPattern.genruntimeconfig.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\FlyWeightPattern\obj\Debug\net6.0\ref\FlyWeightPattern.dll

@@ -16,7 +16,8 @@ namespace Services.Services
         Task<bool> CheckIfNameExists(string UserName, string BankName);
         Task<decimal> GetUsersBalance(string Email);
         Task<AccountInfoDataModel> GetAccountInfoByEmail(string Email);
-        Task<string> WithdrawOrDepositMoney(AccountInfoDataModel Account, decimal money, bool IsWithdraw);
+        Task<string> WithdrawOrDepositMoney(AccountInfoDataModel Account, decimal money, bool IsWithdraw,string? CurrencyType);
         Task<string> Transaction(AccountInfoDataModel Account, decimal money, bool IsRTGS, bool IsSameBank, string? BankName, string? AccountName);
+        Task<bool> CheckIfCurrencyExists(string Currency);
     }
 }

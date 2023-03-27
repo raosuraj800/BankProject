@@ -15,11 +15,13 @@ namespace Services.Services
     {
         private UnitOfWork<BankDatabaseContext> unitOfWork = new UnitOfWork<BankDatabaseContext>();
         private GenericRepository<Bank> repository;
+        private GenericRepository<CurrencyChart> CurrencyRepository;
         private IBankRepository bankRepo;
         public BankBusiness()
         {
             //If you want to use Generic Repository with Unit of work
             repository = new GenericRepository<Bank>(unitOfWork);
+            CurrencyRepository = new GenericRepository<CurrencyChart>(unitOfWork);
             //If you want to use Specific Repository with Unit of work
             bankRepo = new BankRepository(unitOfWork);
         }
@@ -62,6 +64,25 @@ namespace Services.Services
         {
             var BankId = bankRepo.GetBankIdByBankName(BankName);
             return BankId;
+        }
+        public string InsertCurrencyRate(string Currency,decimal Rate)
+        {
+            try
+            {
+                var CurrencyChart = new CurrencyChartDataModel();
+                CurrencyChart.CurrencyType= Currency;
+                CurrencyChart.Rate= Rate;
+                CurrencyChart.IsActive= true;
+                CurrencyChart.CreatedBy = "Suraj";
+                var result = CurrencyChart.Adapt<CurrencyChart>();
+                CurrencyRepository.Insert(result);
+                unitOfWork.Save();
+                return "Currency Saved";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

@@ -1,0 +1,15 @@
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\bin\Debug\net6.0\AdapterPattern.exe
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\bin\Debug\net6.0\AdapterPattern.deps.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\bin\Debug\net6.0\AdapterPattern.runtimeconfig.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\bin\Debug\net6.0\AdapterPattern.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\bin\Debug\net6.0\AdapterPattern.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\obj\Debug\net6.0\AdapterPattern.csproj.AssemblyReference.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\obj\Debug\net6.0\AdapterPattern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\obj\Debug\net6.0\AdapterPattern.AssemblyInfoInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\obj\Debug\net6.0\AdapterPattern.AssemblyInfo.cs
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\obj\Debug\net6.0\AdapterPattern.csproj.CoreCompileInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\obj\Debug\net6.0\AdapterPattern.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\obj\Debug\net6.0\refint\AdapterPattern.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\obj\Debug\net6.0\AdapterPattern.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\obj\Debug\net6.0\AdapterPattern.genruntimeconfig.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\ConsoleApp2\obj\Debug\net6.0\ref\AdapterPattern.dll

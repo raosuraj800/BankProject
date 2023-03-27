@@ -11,7 +11,9 @@ using DBLayer.Models;
 using DBLayer.Repository;
 using DBLayer.UnitOfWork;
 using Mapster;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Owin.Logging;
 
 namespace Services.Services.Class
 {
@@ -22,13 +24,16 @@ namespace Services.Services.Class
         private GenericRepository<AccountInfo> repository;
         private GenericRepository<TransactionInfo> Transactionrepository;
         private IBankRepository bankRepo;
-        public AccountBusiness()
+        private Microsoft.Extensions.Logging.ILogger log;
+        public AccountBusiness(Microsoft.Extensions.Logging.ILoggerFactory logs)
         {
             //  If you want to use Generic Repository with Unit of work
             repository = new GenericRepository<AccountInfo>(unitOfWork);
             Transactionrepository = new GenericRepository<TransactionInfo>(unitOfWork);
             //If you want to use Specific Repository with Unit of work
             bankRepo = new BankRepository(unitOfWork);
+            this.log = logs.CreateLogger<AccountBusiness>();
+
         }
 
         public string GetRandomPassword(int length)
@@ -53,11 +58,14 @@ namespace Services.Services.Class
                 var Result = Account.Adapt<AccountInfo>();
                 repository.Insert(Result);
                 unitOfWork.Save();
+                log.LogInformation("Inserted Successfully");
                 return "Added";
+
+                
             }
             catch (Exception ex)
             {
-                return "";
+                log.LogError(" "+ex);
                 throw ex;
             }
         }
@@ -70,6 +78,7 @@ namespace Services.Services.Class
         public async Task<decimal> GetUsersBalance(string Email)
         {
             var result =await bankRepo.CheckBalance(Email);
+            log.LogInformation($"{result}");
             return result;
         }
         public async Task<AccountInfoDataModel> GetAccountInfoByEmail(string Email) {
@@ -83,29 +92,33 @@ namespace Services.Services.Class
                 throw ex;
             }
         }
-
-        public async Task<string> WithdrawOrDepositMoney(AccountInfoDataModel Account, decimal money, bool IsWithdraw)
+        
+        public async Task<string> WithdrawOrDepositMoney(AccountInfoDataModel Account, decimal money, bool IsWithdraw,string? CurrencyType)
         {
             try
             {
                 if (IsWithdraw)
                     Account.Balance -= money;
                 else
-                    Account.Balance += money;
+                {
+                    var Rates = await bankRepo.GetCurrencyRate(CurrencyType);
+                    Account.Balance += Rates*money;
+                }
                 Account.UpdatedBy = "Suraj";
                 var AccountInfo = Account.Adapt<AccountInfo>();
                 repository.Update(AccountInfo);
                 unitOfWork.Save();
+                log.LogInformation($"AccountInfo: {AccountInfo}");
                 return "Transaction Completed";
             }
             catch (Exception ex)
             {
-                return "";
+                log.LogError("Error"+ex);
                 throw ex;
             }
         }
         public async Task<string> Transaction(AccountInfoDataModel Account, decimal money, bool IsRTGS,bool IsSameBank, string? BankName, string? AccountName)
-        {
+            {
             try
             {
                 string? AccountId;
@@ -123,7 +136,7 @@ namespace Services.Services.Class
                 {
                     if (bankRepo.CheckIfAccountExists(AccountName, BankName))
                     {
-                        var toAccount =await bankRepo.GetAccountDetails(BankName, AccountName);
+                        var toAccount =await bankRepo.GetAccountDetails(AccountName, BankName);
                         AccountId= toAccount.AccountId;
                         BankId= toAccount.BankId;
                         toAccount.Balance += money;
@@ -153,10 +166,11 @@ namespace Services.Services.Class
                 var Transaction = new TransactionInfoDataModel();
                 Transaction.BankId = BankId;
                 Transaction.AccountId = AccountId;
-                Transaction.TransactionId = "TXN" +  AccountInfo.AccountId+AccountInfo.BankId;
+                Transaction.TransactionId = "TXN" +  AccountInfo.AccountId+AccountInfo.BankId+ string.Concat(DateTime.Now.ToString().Where(c => !char.IsWhiteSpace(c)));
                 Transaction.IsRtgs= IsRTGS;
                 Transaction.Amount = money;
                 Transaction.IsActive= true;
+                Transaction.CreatedBy = "suraj";
                 var result = Transaction.Adapt<TransactionInfo>();
                 Transactionrepository.Insert(result);
                 unitOfWork.Save();
@@ -167,6 +181,11 @@ namespace Services.Services.Class
                 return "";
                 throw ex;
             }
+        }
+        public async Task<bool> CheckIfCurrencyExists(string Currency)
+        {
+            var result = await bankRepo.CheckIfCurrencyExists(Currency);
+            return result;
         }
         public IEnumerable<AccountInfo> GetAll()
         {
@@ -194,5 +213,8 @@ namespace Services.Services.Class
         }
 
         
+    }
+    public class ApplicationLogs
+    {
     }
 }

@@ -48,5 +48,13 @@ namespace Presentation.Controllers
 
             return Ok(Response);
         }
+        [Authorize(Roles = "Admin")]
+        [HttpPost]
+        [Route("InsertCurrencyValues")]
+        public IActionResult InsertCurrencyValues([FromBody] CurrencyModel model)
+        {
+            var Response = _bankBusiness.InsertCurrencyRate(model.CurrencyType,model.Rate);
+            return Ok(Response);
+        }
     }
 }

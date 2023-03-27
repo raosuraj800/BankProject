@@ -1,0 +1,15 @@
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\bin\Debug\net6.0\Check.exe
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\bin\Debug\net6.0\Check.deps.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\bin\Debug\net6.0\Check.runtimeconfig.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\bin\Debug\net6.0\Check.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\bin\Debug\net6.0\Check.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\obj\Debug\net6.0\Check.csproj.AssemblyReference.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\obj\Debug\net6.0\Check.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\obj\Debug\net6.0\Check.AssemblyInfoInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\obj\Debug\net6.0\Check.AssemblyInfo.cs
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\obj\Debug\net6.0\Check.csproj.CoreCompileInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\obj\Debug\net6.0\Check.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\obj\Debug\net6.0\refint\Check.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\obj\Debug\net6.0\Check.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\obj\Debug\net6.0\Check.genruntimeconfig.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\Check\obj\Debug\net6.0\ref\Check.dll

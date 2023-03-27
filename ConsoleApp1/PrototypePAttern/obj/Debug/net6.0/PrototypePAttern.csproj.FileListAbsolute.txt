@@ -1,0 +1,15 @@
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\bin\Debug\net6.0\PrototypePAttern.exe
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\bin\Debug\net6.0\PrototypePAttern.deps.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\bin\Debug\net6.0\PrototypePAttern.runtimeconfig.json
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\bin\Debug\net6.0\PrototypePAttern.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\bin\Debug\net6.0\PrototypePAttern.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\obj\Debug\net6.0\PrototypePAttern.csproj.AssemblyReference.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\obj\Debug\net6.0\PrototypePAttern.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\obj\Debug\net6.0\PrototypePAttern.AssemblyInfoInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\obj\Debug\net6.0\PrototypePAttern.AssemblyInfo.cs
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\obj\Debug\net6.0\PrototypePAttern.csproj.CoreCompileInputs.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\obj\Debug\net6.0\PrototypePAttern.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\obj\Debug\net6.0\refint\PrototypePAttern.dll
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\obj\Debug\net6.0\PrototypePAttern.pdb
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\obj\Debug\net6.0\PrototypePAttern.genruntimeconfig.cache
+C:\Users\suraj.v\source\repos\ConsoleApp1\PrototypePAttern\obj\Debug\net6.0\ref\PrototypePAttern.dll

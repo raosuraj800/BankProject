@@ -70,12 +70,12 @@ namespace Presentation.Controllers
         [Route("GetBankBalanceOfUser")]
         [HttpGet]
         [Authorize(Roles = "User")]
-        public IActionResult GetBankBalanceOfUser()
+        public async Task<IActionResult> GetBankBalanceOfUser()
         {
             var claimsIdentity = User.Identity as ClaimsIdentity;
             var email = claimsIdentity.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Email).Value;
-            var balance = _AccountBusiness.GetUsersBalance(email).ToString();
-            decimal parsed = decimal.Parse(balance, CultureInfo.InvariantCulture);
+            var balance = await _AccountBusiness.GetUsersBalance(email);
+            decimal parsed =  decimal.Parse(balance.ToString(), CultureInfo.InvariantCulture);
             CultureInfo hindi = new CultureInfo("hi-IN");
             string text = string.Format(hindi, "{0:c}", parsed);
             return Ok(text);
@@ -83,34 +83,40 @@ namespace Presentation.Controllers
         [Route("WithdrawOrDepositMoney")]
         [HttpPost]
         [Authorize(Roles = "User")]
-        public async Task<IActionResult> WithdrawOrDepositMoney([FromUri]decimal Amount,bool IsWithdraw)
+        public async Task<IActionResult> WithdrawOrDepositMoney([FromUri]decimal Amount,bool IsWithdraw,string? CurrencyType)
         {
             var claimsIdentity = User.Identity as ClaimsIdentity;
             var email = claimsIdentity.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Email).Value;
             if (IsWithdraw)
             {
                 var balance =await _AccountBusiness.GetUsersBalance(email);
-                if (balance > Amount)
+                if (balance < Amount)
+                    
                     return BadRequest("The Balance is less than the requested Amount");
-               
+
+            }
+            else
+            {
+                if ((String.IsNullOrEmpty(CurrencyType)) || !(await _AccountBusiness.CheckIfCurrencyExists(CurrencyType)))
+                    return BadRequest("No Currency/Currency Type Missing");
             }
             var Account = await _AccountBusiness.GetAccountInfoByEmail(email);
-            var result = _AccountBusiness.WithdrawOrDepositMoney(Account, Amount, IsWithdraw);
+            var result = _AccountBusiness.WithdrawOrDepositMoney(Account, Amount, IsWithdraw,CurrencyType);
             return Ok(result);
         }
         [Route("Transaction")]
         [HttpPost]
         [Authorize(Roles = "User")]
-        public async Task<IActionResult> Transaction([FromUri] decimal Amount, bool toSameBank,string? BankName,bool IsRTGS,string? AccountName)
+        public async Task<IActionResult> Transaction([FromBody] TransactionAccount Transaction)
         {
             var claimsIdentity = User.Identity as ClaimsIdentity;
             var email = claimsIdentity.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Email).Value;
-            if (!toSameBank)
+            if (!Transaction.toSameBank)
             {
-                if (!IsRTGS)
+                if (!Transaction.IsRTGS)
                 {
                     var balance = await _AccountBusiness.GetUsersBalance(email);
-                    if (balance < Amount + ((Amount * 6) / 100))
+                    if (balance < Transaction.Amount + ((Transaction.Amount * 6) / 100))
                         return BadRequest("The Balance is less than the requested Amount");
                   
                 }
@@ -118,7 +124,7 @@ namespace Presentation.Controllers
             }
            
             var Account = await _AccountBusiness.GetAccountInfoByEmail(email);
-            var result = _AccountBusiness.Transaction(Account, Amount, IsRTGS,toSameBank,BankName,AccountName);
+            var result = _AccountBusiness.Transaction(Account, Transaction.Amount, Transaction.IsRTGS,Transaction.toSameBank, Transaction.BankName, Transaction.AccountName);
             return Ok(result);
         }
 
